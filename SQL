@@ -1,0 +1,34 @@
+
+CREATE DATABASE "desafioConcrete"
+  WITH OWNER = postgres
+       ENCODING = 'UTF8'
+       TABLESPACE = pg_default
+       LC_COLLATE = 'Portuguese_Brazil.1252'
+       LC_CTYPE = 'Portuguese_Brazil.1252'
+       CONNECTION LIMIT = -1;
+
+
+CREATE TABLE "user"(
+ "id" UUID NOT NULL,
+ "nome" Character varying(50) NOT NULL,
+ "email" Character varying(100) NOT NULL,
+ "senha" Varchar NOT NULL,
+ "data_criacao" Date DEFAULT NOW() NOT NULL,
+ "data_atualizacao" Date,
+ "ultimo_login" Date,
+ "token" UUID NOT NULL
+)
+
+CREATE TABLE public.users
+(
+  id uuid NOT NULL,
+  nome character varying(50) NOT NULL,
+  email character varying(100) NOT NULL,
+  senha character varying NOT NULL,
+  data_criacao date NOT NULL,
+  data_atualizacao date,
+  ultimo_login date,
+  token uuid NOT NULL,
+  CONSTRAINT pk_users PRIMARY KEY (id),
+  CONSTRAINT unique_email UNIQUE (email)
+)
