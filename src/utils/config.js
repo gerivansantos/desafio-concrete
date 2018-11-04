@@ -4,9 +4,17 @@ const config = {
         username: process.env.CS_DB_USER || 'lvmlzjewscwulv',
         password: process.env.CS_DB_PASSWORD || 'b5a13f1bd7f6f213812e30e8fe73d8392188ecb1688daa05c203b4db0c5bce5d',
         database: process.env.CS_DB || 'dd6qrf175nihue', //'desafioConcrete',
-        port: 5432,
-        ssl: true
-      },
+        port: 5432,    
+        native: true,  
+    },
+
+    // db: {
+    //     host: 'localhost',
+    //     username: process.env.CS_DB_USER || 'postgres',
+    //     password: process.env.CS_DB_PASSWORD || 'avantia123',
+    //     database: process.env.CS_DB || 'desafioConcrete',
+    //     port: 5432    
+    // },
 
     message: {
 
