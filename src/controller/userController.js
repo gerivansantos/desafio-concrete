@@ -52,6 +52,7 @@ const userController = {
           }).catch(function(error){
 
                var message = config.message.DEFAULT_ERROR;              
+               console.log(error.message)
                if (error.errors[0].path == "email") {
                 message = config.message.ALREADY_MAIL;
                }

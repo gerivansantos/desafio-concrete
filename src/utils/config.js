@@ -1,9 +1,9 @@
 const config = {
     db: {
-        host: 'localhost',
-        username: process.env.CS_DB_USER || 'postgres',
-        password: process.env.CS_DB_PASSWORD || 'avantia123',
-        database: process.env.CS_DB || 'desafioConcrete',
+        host: 'ec2-184-73-169-151.compute-1.amazonaws.com', //'localhost',
+        username: process.env.CS_DB_USER || 'lvmlzjewscwulv',
+        password: process.env.CS_DB_PASSWORD || 'b5a13f1bd7f6f213812e30e8fe73d8392188ecb1688daa05c203b4db0c5bce5d',
+        database: process.env.CS_DB || 'dd6qrf175nihue', //'desafioConcrete',
         port: 5432
       },
 
