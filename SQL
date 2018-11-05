@@ -5,19 +5,8 @@ CREATE DATABASE "desafioConcrete"
        TABLESPACE = pg_default
        LC_COLLATE = 'Portuguese_Brazil.1252'
        LC_CTYPE = 'Portuguese_Brazil.1252'
-       CONNECTION LIMIT = -1;
+       CONNECTION LIMIT = -1;     
 
-
-CREATE TABLE "user"(
- "id" UUID NOT NULL,
- "nome" Character varying(50) NOT NULL,
- "email" Character varying(100) NOT NULL,
- "senha" Varchar NOT NULL,
- "data_criacao" Date DEFAULT NOW() NOT NULL,
- "data_atualizacao" Date,
- "ultimo_login" Date,
- "token" UUID NOT NULL
-)
 
 CREATE TABLE public.users
 (
@@ -28,7 +17,24 @@ CREATE TABLE public.users
   data_criacao date NOT NULL,
   data_atualizacao date,
   ultimo_login date,
-  token uuid NOT NULL,
   CONSTRAINT pk_users PRIMARY KEY (id),
   CONSTRAINT unique_email UNIQUE (email)
+)
+
+CREATE TABLE public.users_phone
+(
+  id uuid NOT NULL,
+  usuario_id uuid NOT NULL,
+  telefone character varying(9),
+  ddd character varying(3),
+  CONSTRAINT pk_users_phone PRIMARY KEY (id)
+)
+
+CREATE TABLE public.session
+(
+  id uuid NOT NULL,
+  usuario_id uuid NOT NULL,
+  token uuid NOT NULL,
+  data_gerado timestamp with time zone,
+  CONSTRAINT pk_session PRIMARY KEY (id)
 )
