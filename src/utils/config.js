@@ -8,14 +8,6 @@ const config = {
         native: true,  
     },
 
-    // db: {
-    //     host: 'localhost',
-    //     username: process.env.CS_DB_USER || 'postgres',
-    //     password: process.env.CS_DB_PASSWORD || 'avantia123',
-    //     database: process.env.CS_DB || 'desafioConcrete',
-    //     port: 5432    
-    // },
-
     message: {
 
         DEFAULT_ERROR: { mensagem: 'Erro no processo da requisição' },
