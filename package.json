@@ -18,6 +18,15 @@
   },
   "homepage": "https://github.com/gerivansantos/desafio-concrete#readme",
   "dependencies": {
-    
+    "body-parser": "^1.18.3",
+    "crypto": "^1.0.1",
+    "express": "4.13.4",
+    "md5": "^2.2.1",
+    "moment": "2.14.1",
+    "path": "^0.12.7",
+    "pg": "^6.4.1",
+    "pg-hstore": "2.3.2",
+    "ramda": "^0.25.0",
+    "sequelize": "3.20.0"
   }
 }
